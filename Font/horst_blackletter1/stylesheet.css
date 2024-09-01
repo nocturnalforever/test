@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Horst Blackletter';
+    src: url('Horst.eot');
+    src: url('Horst.eot?#iefix') format('embedded-opentype'),
+        url('Horst.woff2') format('woff2'),
+        url('Horst.woff') format('woff'),
+        url('Horst.ttf') format('truetype'),
+        url('Horst.svg#Horst') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

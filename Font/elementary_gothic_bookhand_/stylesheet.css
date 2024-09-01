@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Blade 2';
+    src: url('Blade2-Regular.eot');
+    src: url('Blade2-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Blade2-Regular.woff2') format('woff2'),
+        url('Blade2-Regular.woff') format('woff'),
+        url('Blade2-Regular.ttf') format('truetype'),
+        url('Blade2-Regular.svg#Blade2-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elementary Gothic Bookhand';
+    src: url('ElementaryGothicBookhand-Regular.eot');
+    src: url('ElementaryGothicBookhand-Regular.eot?#iefix') format('embedded-opentype'),
+        url('ElementaryGothicBookhand-Regular.woff2') format('woff2'),
+        url('ElementaryGothicBookhand-Regular.woff') format('woff'),
+        url('ElementaryGothicBookhand-Regular.ttf') format('truetype'),
+        url('ElementaryGothicBookhand-Regular.svg#ElementaryGothicBookhand-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

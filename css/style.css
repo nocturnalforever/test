@@ -1,0 +1,1331 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900');
+
+@font-face {
+    font-family: 'NewtonHowardFont-Regular';
+    src: url('../Font/newton-howard-fonts/NewtonHowardFont-Regular.eot') format('embedded-opentype');
+    src: url('../Font/newton-howard-fonts/NewtonHowardFont-Regular.svg') format('svg');
+    src: url('../Font/newton-howard-fonts/NewtonHowardFont-Regular.ttf') format('truetype');
+    src: url('../Font/newton-howard-fonts/NewtonHowardFont-Regular.woff') format('woff');
+    src: url('../Font/newton-howard-fonts/NewtonHowardFont-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'CelticGaramondthe2nd';
+    src: url('../Font/celtic_garmond/CelticGaramondthe2nd.eot') format('embedded-opentype');
+    src: url('../Font/celtic_garmond/CelticGaramondthe2nd.svg') format('svg');
+    src: url('../Font/celtic_garmond/CelticGaramondthe2nd.ttf') format('truetype');
+    src: url('../Font/celtic_garmond/CelticGaramondthe2nd.woff') format('woff');
+    src: url('../Font/celtic_garmond/CelticGaramondthe2nd.woff2') format('woff2');
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+}
+
+body,
+input,
+textarea,
+button {
+    font-family: 'CelticGaramondthe2nd',
+        'Engravers MT',
+        'Times Ner Roman',
+        Arial,
+        sans-serif;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: black;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+@keyframes ani01 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+    padding: 0 15px;
+}
+
+.section-title h1 {
+    display: inline-block;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+}
+
+.section-title h1:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 80px;
+    height: 3px;
+    background-color: crimson;
+
+}
+
+.btn-01 {
+    /* background-color: #ff9800; */
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px 35px;
+    border-radius: 30px;
+    line-height: 1.5;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.btn-01:hover {
+    background-color: transparent;
+    border-color: #ff9800;
+    color: #ff9800;
+}
+
+.btn-01:focus {
+    outline: none;
+}
+
+/* ---------------------------------Header----------------------- */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    transition: all 0.5 ease;
+    background-color: black;
+}
+
+.header .fixed {
+    background-color: white;
+    position: fixed;
+}
+
+.header .brand-name {
+    padding: 0 15px;
+
+}
+
+.header .brand-name a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+    font-family: 'Chiller';
+}
+
+.header .fixed .brand-name a {
+    color: black;
+}
+
+.header .nav-toggle {
+    width: 40px;
+    height: 34px;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    display: none;
+
+}
+
+.home-badge {
+    width: 55px;
+    height: 55px;
+}
+
+.header .fixed .nav-toggle {
+    border-color: black;
+}
+
+.header .nav-toggle span {
+    height: 1px;
+    display: block;
+    width: 16px;
+    background-color: white;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.header .nav-toggle span::before,
+.header .nav-toggle span::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+.header .fixed .nav-toggle span,
+.header .fixed .nav-toggle:before,
+.header .fixed .nav-toggle:after {
+    background-color: black;
+}
+
+.header .nav-toggle span:before {
+    transform: translate(-6px);
+}
+
+.header .nav-toggle span:after {
+    transform: translate(-6px);
+}
+
+.header .nav {
+    padding: 0 15px;
+}
+
+.header .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header .nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.header .nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    padding: 25px 0;
+    display: block;
+    transition: all 0.5s ease;
+    font-family: 'NewtonHowardFont-Regular',
+        'Old English Text MT',
+        'Engravers MT',
+        'Times New Roman',
+        sans-serif;
+}
+
+.header .fixed .nav ul li a {
+    color: black;
+}
+
+.header .fixed .nav ul li a:hover,
+.header .nav ul li a:hover {
+    color: crimson;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 0 12px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6em;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    /* display: inline-block; */
+    text-align: right;
+}
+
+.dropbtn div {
+    background-color: lightgray;
+    border-radius: 2em;
+    padding: 5px 3em;
+    margin: 3px;
+}
+
+.dropbtn div:hover {
+    background-color: crimson;
+    transition: all 2s ease;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    /* position: absolute; */
+    text-align: right;
+    justify-content: right;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 2em;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'NewtonHowardFont-Regular',
+        'Engravers MT',
+        'Times New Roman',
+        sans-serif;
+    border-radius: 2em;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    opacity: 0.7;
+    background-color: crimson;
+    transition: all 1s ease;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* -------------------------------------Home section------------------------- */
+
+.index-page {
+    background-image: url('../Images/clouds_moving.gif');
+    background-size: cover;
+    /* background-color: white; */
+}
+
+@keyframes animatedBackground {
+    from {
+        background-size: 100%;
+        background-position: 50% 22%;
+    }
+
+    to {
+        background-size: 100%;
+        background-position: 100% 22%;
+    }
+}
+
+#home {
+    background-color: white;
+    color: black;
+}
+
+.home-section {
+    min-height: 100vh;
+    background-image: url('../icons/LOGO-GITTER.gif');
+    background-size: 80%;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 15px;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 5em;
+    border-radius: 50em;
+    border-color: transparent;
+
+}
+
+.home-section .home-container {
+    background-color: transparent;
+    border-radius: 100em;
+    border: 2px solid transparent;
+}
+
+.home-section:before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0.7;
+    z-index: -1;
+    border-radius: 100em;
+}
+
+.shape-01 {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border: 2px solid crimson;
+    right: 5%;
+    top: 20%;
+    animation: ani01 5s linear infinite;
+    /* background-color: crimson; */
+    text-align: center;
+    font-size: larger;
+    color: hotpink;
+    font-family: 'Engravers MT',
+        'Times New Roman',
+        'Arial',
+        sans-serif;
+}
+
+
+.home-section .row {
+    min-height: 100vh,
+}
+
+.home-section .home-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 16em;
+}
+
+
+.home-section .home-content h5 {
+    font-size: 20px;
+    margin: 0;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 10px;
+    font-family: 'Engravers MT', 'Times New Roman', sans-serif;
+}
+
+.home-section .container .home-content img {
+    margin-left: 21em;
+    margin-top: -3em;
+    width: 250px;
+    height: 200px;
+}
+
+.scroll-section {
+    text-align: center;
+}
+
+.scroll-button {
+    border-radius: 4em;
+    border: solid 2px green;
+    background-color: green;
+}
+
+.scroll-button:hover {
+    background-color: greenyellow;
+    border-color: greenyellow;
+    cursor: pointer;
+}
+
+
+@keyframes scrollDown {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.scroll-down img {
+    width: 25px;
+    display: block;
+    margin: 2px auto;
+
+}
+
+.countdown {
+    border-top: 2px groove lightgrey;
+    border-bottom: 2px groove lightgrey;
+    border-radius: 8em;
+    margin: 1em 9em;
+    text-align: center;
+    background-color: grey;
+}
+
+.countdown-date {
+    color: grey;
+    font-family:
+        'Engravers MT',
+        'Times New Roman',
+        sans-serif;
+    margin-top: 2em 0;
+    font-size: 13px;
+}
+
+#demo {
+    text-align: center;
+    padding: 0.5em 0;
+    color: lightgray;
+}
+
+.countdown-landing {
+    text-align: center;
+    margin-top: 15em;
+}
+
+.btn-landing {
+    background-color: black;
+    border-radius: 2em;
+    border-color: darkgray;
+    color: green;
+    margin-top: 2%;
+    padding: 1em;
+    font-size: 12px;
+}
+
+.btn-landing:hover {
+    background-color: green;
+    color: black;
+    transition: all 2s ease;
+    cursor: pointer;
+}
+
+
+/* ---------------------------------------------About Section------------------------------------------- */
+
+#about-desc{
+    padding: 2em;
+    background-color: black;
+    display: block;
+}
+
+.about-desc-block{
+    border-radius: 5em;
+    border: solid #020002 2em;
+    text-align: center;
+    background-color: white;
+    color: white;
+}
+
+#about-logo:hover {
+    size: 6em;
+}
+
+.button-main-field {
+    margin-top: 2em;
+}
+
+.button-main {
+    border: 2px solid white;
+    background-color: white;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-left: 0;
+    padding-right: 5em;
+    margin-top: 2em;
+    border-radius: 4em;
+    text-decoration: none;
+    color: black;
+}
+
+.button-main:hover {
+    background-color: green;
+    animation-delay: 0.5s;
+    transition: all 0.5s ease;
+}
+
+.about-block {
+    text-align: center;
+}
+
+.about-block .about-block-container {
+    padding: 2em 0;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.about-block .about-block-container .about-container-content {
+    text-align: center;
+}
+
+/* -------------------------------------------------Password input------------------------------------------------------------------- */
+
+.alert {
+    margin-bottom: 1em;
+    color: crimson;
+    font-family: 'Engravers MT',
+        'Times New Roman',
+        sans-serif;
+}
+
+.password-input-section {
+    align-items: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15em;
+    margin-bottom: 10em;
+    background-color: #020002;
+}
+
+.password-input-div {
+    display: block;
+    justify-content: center;
+}
+
+.password-input-div h5 {
+    margin-bottom: 1em;
+}
+
+.password-input {
+    background-color: black;
+    border-color: gray;
+    color: white;
+    border-radius: 6em;
+}
+
+.password-input-section .password-input-div .button-main-field .button-main {
+    font-family: 'Times New Roman', sans-serif;
+    text-decoration: none;
+    color: purple;
+}
+
+.password-input-section .password-input-div .button-main-field .button-main:hover {
+    color: crimson;
+    border: 2px solid white;
+}
+
+.password-button-main {
+    background-color: transparent;
+    border: 2px solid grey;
+    border-radius: 6em;
+    color: white;
+}
+
+.password-button-main:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+
+/* -----------------------------------------------------INFO HTML--------------------------------------------------- */
+
+.shape-02 {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 7%;
+    animation: ani01 10s linear infinite;
+    text-align: center;
+    color: black;
+    border: 2px solid #00BE00;
+    font-family: 'Engravers MT',
+        'Times New Roman',
+        'Arial',
+        sans-serif;
+}
+
+#info-backgound {
+    /*     background-image: url('../Images/Runing_animation.gif');
+    background-position: center;
+    background-size: cover; */
+}
+
+.about-article {
+    text-align: center;
+    margin-top: 4em;
+    /* background-color: #020002; */
+}
+
+.about-article .about-article-div {
+    font-family: 'CelticGaramondthe2nd',
+        'Engravers MT',
+        'Times New Roman',
+        'Arial', sans-serif;
+    background-position: center;
+    background-size: cover;
+}
+
+.about-article-text {
+    font-family: 'CelticGaramondthe2nd', 'Engravers MT', 'Times New Roman', 'Arial', sans-serif;
+    color: gray;
+    font-weight: bold;
+    margin: 3em 0;
+    border-radius: 90em;
+    text-align: center;
+    padding: 0em 2em;
+}
+
+.about-article .about-article-div .about-article-text .about-article-text-underline {
+    border: 2px solid black;
+}
+
+#nocturnal-tickets-button{
+    border-radius: 5em;
+    border-style: groove;
+    background-color: greenyellow;
+    padding: 2em;
+}
+
+#nocturnal-tickets-button:hover{
+    transition: all  ease;
+    background-color: green;
+}
+
+.value-section {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.value-container {
+    padding: 9em;
+    display: inline-block;
+    background-image: url('../Images/MvO2n8Gbrj-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.location-text {
+    font-family: 'Engravers MT', 'Times New Roman', sans-serif, monospace;
+    color: white;
+    font-weight: lighter;
+    text-transform: lowercase;
+}
+
+/* Cursor blinking */
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+.button-div {
+    margin-top: 8em;
+    margin-bottom: 2em;
+
+}
+
+.button {
+    border: 2px groove grey;
+    border-radius: 6em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'NewtonHowardFont-Regular',
+        'Old English Text MT',
+        'Engravers MT',
+        'Times New Roman',
+        sans-serif;
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    background: white;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+.show-me-button-div {
+    margin-top: 10em;
+    /* padding-left: 30em;
+    padding-right: 30em; */
+    align-content: center;
+    justify-content: center;
+
+}
+
+.shop-button {
+    border: 2px groove white;
+    background-color: white;
+    color: black;
+    padding: 0.2em;
+    margin-top: 2em;
+    border-radius: 6em;
+    text-decoration: none;
+}
+
+.value-section .value-container p {
+    font-family: 'CelticGaramondthe2nd',
+        'Engravers MT',
+        'Times New Roman',
+        sans-serif,
+        monospace;
+    color: greenyellow;
+    background-color: black;
+    padding: 2em;
+    border-radius: 6em;
+}
+
+.shop-button:hover {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    transition: all 0.5 ease;
+    border-color: green;
+}
+
+.socials-block {
+    display: inline-block;
+    text-align: center;
+}
+
+.info_button {
+    background-color: white;
+    border-radius: 6em;
+    padding: 0.5em;
+    border: 2px groove white;
+    color: black;
+    text-decoration: none;
+}
+
+.info_button:hover {
+    background-color: green;
+    transition: all 0.5s ease;
+}
+
+#DW-btn {
+    background-image: url('../icons/simple-eye-icon.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4em;
+    border-color: transparent;
+}
+
+
+/* ---------------------------------------------------Footer--------------------------------------------------- */
+
+.footer_block {
+    padding: 2em;
+    background-color: black;
+}
+
+.footer-businesses-block {
+    border-top: 2px groove gray;
+
+}
+
+.footer-businesses {
+    display: inline-block;
+    list-style: square;
+    color: gray;
+
+}
+
+.footer {
+    color: gray;
+}
+
+.footer-icons {
+    display: flex;
+}
+
+/* ----------------------------------------------------SHOP------------------------------------------------------- */
+
+.shop-div {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Times New Roman', sans-serif;
+    margin: 20em 0;
+}
+
+.merch-blocks {
+    text-align: center;
+    justify-content: center;
+}
+
+.merch-blocks-section {
+    margin: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.merch {
+    border: 2px solid white;
+    border-radius: 6em;
+    /* padding:4em */
+}
+
+.web-button {
+    padding: 0.4em 1em;
+    background-color: darkred;
+    border: 2px solid darkred;
+    border-radius: 5em;
+    margin-top: 2em;
+}
+
+.web-button:hover {
+    cursor: pointer;
+    background-color: red;
+    transition: all 2s ease;
+}
+
+@media screen and (max-width: 290px) {
+
+    .countdown-landing {
+        top: 50%;
+    }
+
+    .home-badge {
+        /* padding-top: 5px; */
+        width: 0px;
+        height: 0px;
+    }
+
+    .header {
+        font-size: 8px;
+    }
+
+    .header .nav ul li a {
+        font-size: 8px;
+        padding: 2px 0;
+    }
+
+    .dropbtn {
+        padding-top: 1em;
+    }
+
+    .dropbtn div {
+        background-color: lightgray;
+        border-radius: 2em;
+        padding: 3px 2em;
+        margin: 3px;
+    }
+
+    .home-section {
+        margin-left: 4em;
+        margin-right: 4em;
+        background-image: url('../icons/LOGO-GITTER.gif');
+        padding-bottom: 5em;
+        background-size: cover;
+    }
+
+    .home-section .home-content h5 {
+        font-size: 5px;
+        margin: 0;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 0px;
+        font-family: 'Engravers MT', 'Times New Roman', sans-serif;
+    }
+
+    .home-section .container .home-content img {
+        width: 120px;
+        height: 100px;
+    }
+
+    .countdown {
+        border-top: 2px groove lightgrey;
+        border-bottom: 2px groove lightgrey;
+        border-radius: 8em;
+        margin: 1em 0em;
+        text-align: center;
+    }
+
+    .countdown-date {
+        color: grey;
+        font-family:
+            'Engravers MT',
+            'Times New Roman',
+            sans-serif;
+        margin-top: 2em 0;
+        font-size: 12px;
+    }
+
+    #demo {
+        text-align: center;
+        padding: 0.5em 0;
+        color: crimson;
+    }
+
+    #about-logo{
+        width: 5em;
+        height: 5em;
+    }
+
+    .about-article {
+        margin-top: 1em;
+    }
+
+    .about-block .about-block-container .about-container-content {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .button {
+        font-size: 8px;
+    }
+
+    .info_button {
+        font-size: 8px;
+    }
+
+    .value-section .values {
+        font-size: 10px;
+    }
+
+    .password-input-section {
+        margin-top: 2em;
+    }
+
+    .password-input {
+        width: 230px;
+    }
+
+    .password-button-main {
+        font-size: 8px;
+    }
+
+    .button-div {
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
+    .value-section .value-container {
+        font-size: 12px;
+        padding-top: 5em;
+    }
+
+    #show-me-button-div {
+        margin-top: 20em;
+    }
+
+    /* .value-text{
+                display: flex;
+            } */
+
+
+    .button {
+        border: 2px solid grey;
+        font-size: 14px;
+    }
+
+    .button:hover {
+        border: 2px solid white;
+    }
+
+    .about-article .about-article-div {
+        background-size: 40em;
+        border-radius: 20em;
+    }
+
+    .about-article {
+        margin-top: 0em;
+    }
+
+    .about-article .about-article-div .about-article-text {
+        font-family: 'Engravers MT', 'Times New Roman', 'Arial', sans-serif;
+        color: white;
+        font-weight: bold;
+        padding: 0em 2em;
+        margin: 3em;
+        border-radius: 10em;
+        background-color: black;
+        opacity: 60%;
+        font-size: 10px;
+    }
+
+    .value-text {
+        font-size: 8px;
+    }
+
+    #location-h3 {
+        font-size: 10px;
+    }
+
+    #location-h4 {
+        font-size: 8px;
+    }
+
+    #location-button {
+        font-size: 8px;
+    }
+
+    .footer {
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+
+    .countdown-landing {
+        top: 50%;
+    }
+
+    .dropbtn {
+        padding-top: 1em;
+    }
+
+    .dropbtn div {
+        background-color: lightgray;
+        border-radius: 2em;
+        padding: 3px 2em;
+        margin: 3px;
+    }
+
+    .home-section {
+        margin-left: 4em;
+        margin-right: 4em;
+        background-image: url('../icons/LOGO-GITTER.gif');
+        padding-bottom: 5em;
+        background-size: cover;
+    }
+
+    .home-section .home-content h5 {
+        font-size: 10px;
+        margin: 0;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 6px;
+        font-family: 'Engravers MT', 'Times New Roman', sans-serif;
+    }
+
+    .home-section .container .home-content img {
+        width: 200px;
+        height: 150px;
+    }
+
+    .countdown {
+        border-top: 2px groove lightgrey;
+        border-bottom: 2px groove lightgrey;
+        border-radius: 8em;
+        margin: 1em 1em;
+        text-align: center;
+    }
+
+    .countdown-date {
+        color: grey;
+        font-family:
+            'Engravers MT',
+            'Times New Roman',
+            sans-serif;
+        margin-top: 2em 0;
+        font-size: 12px;
+    }
+
+    #demo {
+        text-align: center;
+        padding: 0.5em 0;
+        color: crimson;
+        font-size: 12px;
+    }
+
+    #about-logo {
+        width: 7em;
+        height: 7em;
+    }
+
+    .about-article {
+        margin-top: 2em;
+    }
+
+    .about-block .about-block-container .about-container-content {
+        font-size: 11px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .countdown-landing {
+        top: 50%;
+    }
+
+    .header .nav ul li a {
+        font-size: 14px;
+    }
+
+    .dropbtn {
+        padding-top: 1em;
+    }
+
+    .dropbtn div {
+        background-color: lightgray;
+        border-radius: 2em;
+        padding: 3px 2em;
+        margin: 3px;
+    }
+
+    .home-section {
+        margin-left: 4em;
+        margin-right: 4em;
+        background-image: url('../icons/LOGO-GITTER.gif');
+        padding-bottom: 5em;
+        background-size: cover;
+    }
+
+    .home-section .container .home-content img {
+        margin: 0em;
+    }
+
+    .home-section .container .row .home-content h5 {
+        font-size: 14px;
+    }
+
+    .countdown {
+        border-top: 2px groove lightgrey;
+        border-bottom: 2px groove lightgrey;
+        border-radius: 8em;
+        margin: 1em 2em;
+        text-align: center;
+    }
+
+    .countdown-date {
+        color: grey;
+        font-family:
+            'Engravers MT',
+            'Times New Roman',
+            sans-serif;
+        margin-top: 2em 0;
+        font-size: 12px;
+    }
+
+    #demo {
+        text-align: center;
+        padding: 0.5em 0;
+        color: crimson;
+        font-size: 12px;
+    }
+
+    .about-article {
+        margin-top: 2em;
+    }
+
+    .about-block .about-block-container .about-container-content {
+        font-size: 12px;
+    }
+
+    /* .index-page {
+        background-image: url('../Images/lightning\ clouds\ darker.png');
+        background-size: cover;
+        background-position: center;
+    } */
+
+    .password-input-section {
+        margin-top: 7em;
+        /* margin-bottom: 20em; */
+    }
+
+    .button-div {
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
+    .value-section .value-container {
+        font-size: 12px;
+        /* padding-left: 15em;
+        padding-right: 15em; */
+        padding-top: 5em;
+
+    }
+
+    #show-me-button-div {
+        margin-top: 20em;
+    }
+
+    /* .value-text{
+        display: flex;
+    } */
+
+    .game-display-div {
+        margin-top: 7em;
+    }
+
+    .button {
+        border: 2px solid grey;
+        font-size: 14px;
+    }
+
+    .button:hover {
+        border: 2px solid white;
+    }
+
+    .about-article .about-article-div {
+        background-size: 40em;
+        border-radius: 20em;
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+    .countdown-landing {
+        top: 50%;
+    }
+
+    /* .home-section{
+        margin-left: 4em;
+        margin-right: 4em;
+        
+    } */
+
+    .home-section .container .home-content img {
+        margin: 0em;
+    }
+
+    .password-input-section {
+        margin-top: 20em;
+        margin-bottom: 30em;
+    }
+
+    .button-div {
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
+    .button {
+        border: 2px solid grey;
+        font-size: 16px;
+    }
+
+    .button:hover {
+        border: 2px solid white;
+    }
+
+}
